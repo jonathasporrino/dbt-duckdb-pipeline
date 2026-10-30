@@ -14,7 +14,7 @@ A public dbt + DuckDB pipeline over ~692k real job postings, rebuilt and republi
 | --- | --- | --- |
 | **dbt pipeline** | sources → cleaned model → insight marts |	[`analytics/models/`](analytics/models/) |
 | **Data tests** | `unique` / `not_null` on every mart grain |	[`schema.yml`](analytics/models/schema.yml) |
-| **Hosted dbt docs** |	lineage, descriptions, column tests |	[Live docs site]
+| **Hosted dbt docs** |	lineage, descriptions, column tests |	[Live docs site](https://jonathasporrino.github.io/dbt-duckdb-pipeline/) |
 | **Public CI** |	build + test + publish on every push | [Actions workflow](https://github.com/jonathasporrino/dbt-duckdb-pipeline/actions/workflows/dbt_build.yml) |
 | **Environments** | local `dev` vs CI `prod` targets |	[`ci/profiles.yml`](ci/profiles.yml) |
 | **Published warehouse** |	one `ATTACH`, queryable by anyone |	[`Query it`](https://github.com/jonathasporrino/dbt-duckdb-pipeline/releases/tag/warehouse) |
@@ -84,7 +84,7 @@ SELECT * FROM monthly_summary;
 
 Docs are generated with `dbt docs generate` and published to GitHub Pages:
 
-**→ [lukebarousse.github.io/dbt_Analytics_Engineering_Course/project1/]()**
+**→ [jonathasporrino.github.io/dbt-duckdb-pipeline/](https://jonathasporrino.github.io/dbt-duckdb-pipeline/)**
 
 The site shows:
 
@@ -126,5 +126,3 @@ uv run dbt docs serve
 ```
 
 ---
-
-*Reference build for Project #1 of the [dbt for Data Analytics & Engineering course](https://www.lukebarousse.com) (lessons 1.01–2.02) — students build this repo themselves and compare against this version. Dataset: real job postings scraped daily.*
